@@ -14,3 +14,7 @@ Read daily sales data from text/CSV files, clean it, summarize totals, and write
     Aggregates metrics: total revenue, product-wise revenue, product-wise quantity sold, daily totals.
     Generates human-readable reports (text/CSV) and a summary JSON.
     Supports incremental updates (append new daily files) and error logging.
+
+Step 1 :: Activate the venv
+    cd /workspaces/Sales-Data-Processing
+    source .venv/bin/activate

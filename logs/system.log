@@ -1,2 +1,34 @@
 2026-01-21 07:05:17,997 [INFO] 🚀 Starting Sales Data Processor
 2026-01-21 07:05:17,997 [WARNING] No CSV files found.
+2026-01-22 20:20:33,993 [INFO] RunID=8c9916 | ℹ️ Logging initialized
+2026-01-22 20:20:34,043 [INFO] RunID=8c9916 | ℹ️ CSV generator started
+2026-01-22 20:20:34,053 [INFO] RunID=8c9916 | ℹ️ Generated CSV file: sales_20260122_202034.csv
+2026-01-22 20:20:36,065 [INFO] RunID=8c9916 | ℹ️ Generated CSV file: sales_20260122_202036.csv
+2026-01-22 20:20:38,073 [INFO] RunID=8c9916 | ℹ️ Generated CSV file: sales_20260122_202038.csv
+2026-01-22 20:20:40,078 [INFO] RunID=8c9916 | ℹ️ Generated CSV file: sales_20260122_202040.csv
+2026-01-22 20:20:42,080 [INFO] RunID=8c9916 | ℹ️ Generated CSV file: sales_20260122_202042.csv
+2026-01-22 20:20:44,088 [INFO] RunID=8c9916 | ℹ️ Generated CSV file: sales_20260122_202044.csv
+2026-01-22 20:20:44,643 [INFO] RunID=8c9916 | ℹ️ Stop CSV generator requested
+2026-01-22 20:20:45,089 [INFO] RunID=8c9916 | ℹ️ CSV generator stopped
+2026-01-22 20:20:52,580 [INFO] RunID=8c9916 | ℹ️ Logging initialized
+2026-01-22 20:20:52,583 [INFO] RunID=8c9916 | ℹ️ Sales Data Processor started
+2026-01-22 20:20:52,586 [INFO] RunID=8c9916 | ℹ️ Processing file: sales_20260122_202034.csv
+2026-01-22 20:20:52,620 [INFO] RunID=8c9916 | ℹ️ File done | sales_20260122_202034.csv | errors=0
+2026-01-22 20:20:52,620 [INFO] RunID=8c9916 | ℹ️ Processing file: sales_20260122_202036.csv
+2026-01-22 20:20:52,636 [INFO] RunID=8c9916 | ℹ️ File done | sales_20260122_202036.csv | errors=0
+2026-01-22 20:20:52,636 [INFO] RunID=8c9916 | ℹ️ Processing file: sales_20260122_202038.csv
+2026-01-22 20:20:52,652 [INFO] RunID=8c9916 | ℹ️ File done | sales_20260122_202038.csv | errors=0
+2026-01-22 20:20:52,652 [INFO] RunID=8c9916 | ℹ️ Processing file: sales_20260122_202040.csv
+2026-01-22 20:20:52,663 [INFO] RunID=8c9916 | ℹ️ File done | sales_20260122_202040.csv | errors=0
+2026-01-22 20:20:52,665 [INFO] RunID=8c9916 | ℹ️ Processing file: sales_20260122_202042.csv
+2026-01-22 20:20:52,679 [INFO] RunID=8c9916 | ℹ️ File done | sales_20260122_202042.csv | errors=0
+2026-01-22 20:20:52,679 [INFO] RunID=8c9916 | ℹ️ Processing file: sales_20260122_202044.csv
+2026-01-22 20:20:52,693 [INFO] RunID=8c9916 | ℹ️ File done | sales_20260122_202044.csv | errors=0
+2026-01-22 20:20:52,696 [INFO] RunID=8c9916 | ℹ️ Run summary | files=6 rows=600 valid=600 invalid=0 qty=3345 revenue=83282795.0
+2026-01-22 20:20:54,697 [WARNING] RunID=8c9916 | ⚠️ No CSV files found
+2026-01-22 20:20:56,698 [WARNING] RunID=8c9916 | ⚠️ No CSV files found
+2026-01-22 20:20:58,699 [WARNING] RunID=8c9916 | ⚠️ No CSV files found
+2026-01-22 20:21:00,700 [WARNING] RunID=8c9916 | ⚠️ No CSV files found
+2026-01-22 20:21:02,702 [WARNING] RunID=8c9916 | ⚠️ No CSV files found
+2026-01-22 20:21:03,055 [INFO] RunID=8c9916 | ℹ️ Stop file processing requested
+2026-01-22 20:21:04,702 [INFO] RunID=8c9916 | ℹ️ Sales Data Processor stopped

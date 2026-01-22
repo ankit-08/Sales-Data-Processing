@@ -1,40 +1,57 @@
-# src/validators.py
 from datetime import datetime
 
-class RowValidationError(ValueError):
-    """Raised when a CSV row is invalid."""
+# -----------------------------
+# Column aliases (schema map)
+# -----------------------------
+COLUMN_ALIASES = {
+    "qty": "quantity",
+    "quantity": "quantity",
+    "price": "price",
+    "product": "product",
+    "date": "date",
+}
 
-def parse_row(fields):
+def normalize_row(row: dict) -> dict:
     """
-    Parse and validate a row list -> (date_str, product, qty_int, price_float).
-    fields: list-like (usually csv.reader row)
-    Raises RowValidationError on invalid input.
+    Normalize CSV row:
+    - strip spaces
+    - lowercase
+    - apply column aliases
     """
-    if len(fields) < 4:
-        raise RowValidationError("Too few columns")
+    normalized = {}
 
-    date_s = fields[0].strip()
-    product = fields[1].strip()
-    qty_s = fields[2].strip()
-    price_s = fields[3].strip()
+    for key, value in row.items():
+        clean_key = key.strip().lower()
+        canonical_key = COLUMN_ALIASES.get(clean_key, clean_key)
+        normalized[canonical_key] = value
 
-    # Validate date (YYYY-MM-DD)
+    return normalized
+
+def validate_row(row: dict):
+    """
+    Returns:
+        (is_valid: bool, reason: str)
+    """
     try:
-        datetime.strptime(date_s, "%Y-%m-%d")
+        datetime.strptime(row["date"], "%Y-%m-%d")
     except Exception:
-        raise RowValidationError(f"Invalid date: {date_s!r}")
+        return False, "invalid_date"
 
-    if not product:
-        raise RowValidationError("Empty product name")
+    if not row.get("product", "").strip():
+        return False, "empty_product"
 
     try:
-        qty = int(qty_s)
+        qty = int(row["quantity"])
+        if qty <= 0:
+            return False, "quantity_non_positive"
     except Exception:
-        raise RowValidationError(f"Invalid quantity: {qty_s!r}")
+        return False, "quantity_not_integer"
 
     try:
-        price = float(price_s)
+        price = float(row["price"])
+        if price <= 0:
+            return False, "price_non_positive"
     except Exception:
-        raise RowValidationError(f"Invalid price: {price_s!r}")
+        return False, "price_not_number"
 
-    return date_s, product, qty, price
+    return True, "ok"

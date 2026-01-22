@@ -1,154 +1,202 @@
 import sys
-import threading
-import logging
+import os
 from PySide6.QtWidgets import (
-    QApplication, QWidget, QPushButton, QTextEdit,
-    QLabel, QVBoxLayout, QHBoxLayout, QGroupBox
+    QApplication, QMainWindow, QPushButton, QLabel,
+    QVBoxLayout, QWidget, QTextEdit, QCheckBox, QComboBox
 )
-from PySide6.QtCore import Qt, Signal, QObject
+from PySide6.QtCore import QTimer
 
-from src.main import main as run_processor
-from test_data_create.generate_test_csv import generate_csv_files
+from test_data_create.generate_test_csv import (
+    start_csv_generator, stop_csv_generator
+)
+from .main import (
+    configure_logging,
+    start_file_processing,
+    stop_file_processing,
+)
 
-# ---------- Logging Bridge ----------
-class QtLogHandler(logging.Handler, QObject):
-    log_signal = Signal(str)
 
-    def __init__(self):
-        logging.Handler.__init__(self)
-        QObject.__init__(self)
+# ============================================================
+# PATHS
+# ============================================================
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+LOG_FILE = os.path.join(PROJECT_ROOT, "logs", "system.log")
 
-    def emit(self, record):
-        msg = self.format(record)
-        self.log_signal.emit(msg)
+# ============================================================
+# STYLES (NO SIZE CHANGE)
+# ============================================================
+ACTIVE_GREEN = """
+QPushButton {
+    background-color: #6fcf97;
+    color: white;
+    font-weight: 600;
+}
+"""
 
-# ---------- Worker Base ----------
-class StoppableWorker(threading.Thread):
-    def __init__(self, target, log_fn):
-        super().__init__(daemon=True)
-        self._stop_event = threading.Event()
-        self.target = target
-        self.log_fn = log_fn
+DANGER_RED = """
+QPushButton {
+    background-color: #eb5757;
+    color: white;
+    font-weight: 600;
+}
+"""
 
-    def stop(self):
-        self._stop_event.set()
-
-    def stopped(self):
-        return self._stop_event.is_set()
-
-# ---------- GUI ----------
-class SalesGUI(QWidget):
+# ============================================================
+# GUI
+# ============================================================
+class App(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Sales Data Processing System")
-        self.setMinimumSize(900, 500)
-        self.setWindowOpacity(0.94)
+        self.setWindowTitle("Sales Data Processor")
 
-        self.data_gen_worker = None
-        self.data_proc_worker = None
+        self.generator_running = False
+        self.processing_running = False
 
-        self.init_ui()
-        self.init_logging()
+        # ---------------- STATUS ----------------
+        self.status = QLabel("Status: Idle")
 
-    # ---------- UI ----------
-    def init_ui(self):
-        main_layout = QHBoxLayout(self)
+        # ---------------- CONTROLS ----------------
+        self.log_console_toggle = QCheckBox("Print logs in terminal")
+        self.log_console_toggle.setChecked(True)
 
-        # ---- Data Creation Section ----
-        self.gen_log = QTextEdit()
-        self.gen_log.setReadOnly(True)
+        self.level_select = QComboBox()
+        self.level_select.addItems(["ALL", "INFO", "WARNING", "ERROR"])
+        self.level_select.setCurrentText("ALL")
 
-        self.gen_btn = QPushButton("▶ Start Data Creation")
-        self.gen_btn.clicked.connect(self.toggle_data_creation)
+        # ---------------- BUTTONS ----------------
+        self.start_gen = QPushButton("Start CSV Generator")
+        self.stop_gen = QPushButton("Stop CSV Generator")
 
-        gen_box = QGroupBox("🧪 Data Creation")
-        gen_layout = QVBoxLayout()
-        gen_layout.addWidget(self.gen_btn)
-        gen_layout.addWidget(self.gen_log)
-        gen_box.setLayout(gen_layout)
+        self.start_proc = QPushButton("Start File Processing")
+        self.stop_proc = QPushButton("Stop File Processing")
 
-        # ---- Data Processing Section ----
-        self.proc_log = QTextEdit()
-        self.proc_log.setReadOnly(True)
+        self.clear_log_btn = QPushButton("Clear Logs")
+        self.exit_btn = QPushButton("Stop Program")
+        self.exit_btn.setStyleSheet(DANGER_RED)
 
-        self.proc_btn = QPushButton("▶ Start Data Processing")
-        self.proc_btn.clicked.connect(self.toggle_data_processing)
+        # ---------------- LOG VIEW ----------------
+        self.log_view = QTextEdit()
+        self.log_view.setReadOnly(True)
 
-        proc_box = QGroupBox("⚙️ Data Processing")
-        proc_layout = QVBoxLayout()
-        proc_layout.addWidget(self.proc_btn)
-        proc_layout.addWidget(self.proc_log)
-        proc_box.setLayout(proc_layout)
+        # ---------------- SIGNALS ----------------
+        self.start_gen.clicked.connect(self.start_generator)
+        self.stop_gen.clicked.connect(self.stop_generator)
 
-        main_layout.addWidget(gen_box)
-        main_layout.addWidget(proc_box)
+        self.start_proc.clicked.connect(self.start_processing)
+        self.stop_proc.clicked.connect(self.stop_processing)
 
-    # ---------- Logging ----------
-    def init_logging(self):
-        self.log_handler = QtLogHandler()
-        self.log_handler.setFormatter(
-            logging.Formatter("%(asctime)s [%(levelname)s] %(message)s")
+        self.clear_log_btn.clicked.connect(self.clear_logs)
+        self.exit_btn.clicked.connect(self.stop_program)
+
+        # ---------------- LAYOUT ----------------
+        layout = QVBoxLayout()
+        layout.addWidget(self.status)
+        layout.addWidget(self.log_console_toggle)
+        layout.addWidget(QLabel("Log Filter (Viewer Only)"))
+        layout.addWidget(self.level_select)
+
+        layout.addWidget(self.start_gen)
+        layout.addWidget(self.stop_gen)
+        layout.addWidget(self.start_proc)
+        layout.addWidget(self.stop_proc)
+        layout.addWidget(self.clear_log_btn)
+        layout.addWidget(self.exit_btn)
+        layout.addWidget(QLabel("Logs"))
+        layout.addWidget(self.log_view)
+
+        container = QWidget()
+        container.setLayout(layout)
+        self.setCentralWidget(container)
+
+        # ---------------- TIMER ----------------
+        self.timer = QTimer()
+        self.timer.timeout.connect(self.refresh_logs)
+        self.timer.start(1000)
+
+    # ========================================================
+    # GENERATOR CONTROL
+    # ========================================================
+    def start_generator(self):
+        if self.generator_running:
+            return
+
+        configure_logging(self.log_console_toggle.isChecked(), "INFO")
+        start_csv_generator()
+
+        self.generator_running = True
+        self.status.setText("Status: Generator Running")
+        self.start_gen.setStyleSheet(ACTIVE_GREEN)
+
+    def stop_generator(self):
+        stop_csv_generator()
+        self.generator_running = False
+        self.status.setText("Status: Generator Stopped")
+        self.start_gen.setStyleSheet("")
+
+    # ========================================================
+    # PROCESSING CONTROL
+    # ========================================================
+    def start_processing(self):
+        if self.processing_running:
+            return
+
+        configure_logging(self.log_console_toggle.isChecked(), "INFO")
+        start_file_processing()
+
+        self.processing_running = True
+        self.status.setText("Status: Processing Running")
+        self.start_proc.setStyleSheet(ACTIVE_GREEN)
+
+    def stop_processing(self):
+        stop_file_processing()
+        self.processing_running = False
+        self.status.setText("Status: Processing Stopped")
+        self.start_proc.setStyleSheet("")
+
+    # ========================================================
+    # LOG VIEWER
+    # ========================================================
+    def refresh_logs(self):
+        if not os.path.exists(LOG_FILE):
+            return
+
+        selected = self.level_select.currentText()
+
+        with open(LOG_FILE, "r", encoding="utf-8") as f:
+            lines = f.readlines()
+
+        if selected != "ALL":
+            lines = [l for l in lines if f"[{selected}]" in l]
+
+        self.log_view.setPlainText("".join(lines))
+        self.log_view.verticalScrollBar().setValue(
+            self.log_view.verticalScrollBar().maximum()
         )
-        self.log_handler.log_signal.connect(self.route_log)
 
-        root = logging.getLogger()
-        root.setLevel(logging.INFO)
-        root.addHandler(self.log_handler)
+    # ========================================================
+    # CLEAR LOGS
+    # ========================================================
+    def clear_logs(self):
+        if os.path.exists(LOG_FILE):
+            open(LOG_FILE, "w").close()
+        self.log_view.clear()
+        self.status.setText("Status: Logs Cleared")
 
-    def route_log(self, message):
-        if "generate" in message.lower():
-            self.gen_log.append(message)
-        else:
-            self.proc_log.append(message)
+    # ========================================================
+    # STOP PROGRAM
+    # ========================================================
+    def stop_program(self):
+        stop_csv_generator()
+        stop_file_processing()
+        self.status.setText("Status: Program Stopped")
+        QApplication.quit()
 
-    # ---------- Data Creation ----------
-    def toggle_data_creation(self):
-        if self.data_gen_worker and self.data_gen_worker.is_alive():
-            self.data_gen_worker.stop()
-            self.gen_btn.setText("▶ Start Data Creation")
-            self.gen_log.append("⛔ Data creation stopped.")
-        else:
-            self.gen_log.append("▶ Data creation started...")
-            self.gen_btn.setText("⛔ Stop Data Creation")
-            self.data_gen_worker = StoppableWorker(
-                target=self.run_data_creation,
-                log_fn=self.gen_log.append
-            )
-            self.data_gen_worker.start()
 
-    def run_data_creation(self):
-        try:
-            generate_csv_files()
-            self.gen_log.append("✅ Data creation completed.")
-        except Exception as e:
-            self.gen_log.append(f"❌ Error: {e}")
-
-    # ---------- Data Processing ----------
-    def toggle_data_processing(self):
-        if self.data_proc_worker and self.data_proc_worker.is_alive():
-            self.proc_log.append("⛔ Stop requested. Finishing current file...")
-            self.proc_btn.setText("▶ Start Data Processing")
-        else:
-            self.proc_log.append("▶ Data processing started...")
-            self.proc_btn.setText("⛔ Stop Data Processing")
-            self.data_proc_worker = threading.Thread(
-                target=self.run_processing,
-                daemon=True
-            )
-            self.data_proc_worker.start()
-
-    def run_processing(self):
-        try:
-            run_processor()
-            self.proc_log.append("✅ Data processing completed.")
-        except Exception as e:
-            self.proc_log.append(f"❌ Error: {e}")
-        finally:
-            self.proc_btn.setText("▶ Start Data Processing")
-
-# ---------- Entry ----------
+# ============================================================
+# ENTRY
+# ============================================================
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    gui = SalesGUI()
-    gui.show()
+    win = App()
+    win.show()
     sys.exit(app.exec())

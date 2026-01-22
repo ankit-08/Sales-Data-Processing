@@ -1,89 +1,102 @@
+import os
+import csv
 import logging
 from collections import defaultdict
-from .validators import parse_row, RowValidationError
-from .io_utils import read_csv_rows, write_text, write_csv
 
-logger = logging.getLogger(__name__)
+from .validators import validate_row, normalize_row
+from .reports import write_reports
+from .context import RUN_ID
 
-class SalesProcessor:
-    def __init__(self):
-        # product -> {'quantity': int, 'revenue': float}
-        self.product_totals = defaultdict(lambda: {"quantity": 0, "revenue": 0.0})
-        # date -> {'quantity': int, 'revenue': float}
-        self.daily_totals = defaultdict(lambda: {"quantity": 0, "revenue": 0.0})
-        self.total_revenue = 0.0
-        self.rows_processed = 0
-        self.rows_skipped = 0
+# ============================================================
+# PATHS
+# ============================================================
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-    def process_row(self, date_str, product, qty, price):
-        revenue = qty * price
-        p = self.product_totals[product]
-        p["quantity"] += qty
-        p["revenue"] += revenue
+DATA_IN = os.path.join(BASE_DIR, "data", "in")
+DATA_OUT = os.path.join(BASE_DIR, "data", "out")
+DATA_ERR = os.path.join(BASE_DIR, "data", "err")
 
-        d = self.daily_totals[date_str]
-        d["quantity"] += qty
-        d["revenue"] += revenue
+os.makedirs(DATA_OUT, exist_ok=True)
+os.makedirs(DATA_ERR, exist_ok=True)
 
-        self.total_revenue += revenue
-        self.rows_processed += 1
+ERROR_THRESHOLD = 5
 
-    def process_file(self, filepath):
-        """
-        Process a single CSV file.
-        Returns number of row-level errors found in this file.
-        """
-        file_errors = 0
+# ============================================================
+# CORE PROCESSOR
+# ============================================================
+def process_all_files():
+    stats = {
+        "files": 0,
+        "rows": 0,
+        "valid": 0,
+        "invalid": 0,
+        "quantity": 0,
+        "revenue": 0,
+        "by_product": defaultdict(lambda: {"qty": 0, "rev": 0}),
+        "by_date": defaultdict(lambda: {"qty": 0, "rev": 0}),
+    }
 
-        try:
-            for lineno, row in enumerate(read_csv_rows(filepath, skip_header=True), start=2):
-                try:
-                    date_s, product, qty, price = parse_row(row)
-                except RowValidationError as e:
-                    logger.error("%s:%d - %s", filepath, lineno, e)
-                    self.rows_skipped += 1
-                    file_errors += 1
+    files = [f for f in os.listdir(DATA_IN) if f.endswith(".csv")]
+    if not files:
+        return {"processed": 0}
+
+    for filename in files:
+        stats["files"] += 1
+        filepath = os.path.join(DATA_IN, filename)
+        error_count = 0
+
+        logging.info(f"Processing file: {filename}")
+
+        with open(filepath, newline="", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+
+            for raw_row in reader:
+                stats["rows"] += 1
+
+                # Normalize headers (CRITICAL FIX)
+                row = normalize_row(raw_row)
+
+                if not validate_row(row):
+                    stats["invalid"] += 1
+                    error_count += 1
                     continue
-                except Exception:
-                    logger.exception("Unexpected error parsing %s:%d", filepath, lineno)
-                    self.rows_skipped += 1
-                    file_errors += 1
-                    continue
 
-                self.process_row(date_s, product, qty, price)
+                stats["valid"] += 1
 
-        except FileNotFoundError:
-            logger.error("File not found: %s", filepath)
-            return 999
-        except PermissionError:
-            logger.error("Permission denied reading: %s", filepath)
-            return 999
+                qty = int(row["quantity"])
+                price = float(row["price"])
+                revenue = qty * price
 
-        return file_errors
+                stats["quantity"] += qty
+                stats["revenue"] += revenue
 
-    def generate_text_report(self):
-        lines = []
-        lines.append(f"Rows processed: {self.rows_processed}")
-        lines.append(f"Rows skipped: {self.rows_skipped}")
-        lines.append(f"Total Revenue: {self.total_revenue:.2f}")
-        lines.append("")
-        lines.append("Product-wise totals:")
-        for prod, vals in sorted(self.product_totals.items(), key=lambda kv: -kv[1]["revenue"]):
-            lines.append(f"{prod}: Qty={vals['quantity']}, Revenue={vals['revenue']:.2f}")
-        lines.append("")
-        lines.append("Daily totals:")
-        for date, vals in sorted(self.daily_totals.items()):
-            lines.append(f"{date}: Qty={vals['quantity']}, Revenue={vals['revenue']:.2f}")
-        return "\n".join(lines)
+                # ---- Aggregations ----
+                stats["by_product"][row["product"]]["qty"] += qty
+                stats["by_product"][row["product"]]["rev"] += revenue
 
-    def write_reports(self, outdir):
-        txt = self.generate_text_report()
-        write_text(f"{outdir}/sales_summary.txt", txt)
+                stats["by_date"][row["date"]]["qty"] += qty
+                stats["by_date"][row["date"]]["rev"] += revenue
 
-        prod_rows = [(p, v["quantity"], f"{v['revenue']:.2f}") for p, v in self.product_totals.items()]
-        prod_rows.sort(key=lambda r: float(r[2]), reverse=True)
-        write_csv(f"{outdir}/product_totals.csv", ["Product", "Quantity", "Revenue"], prod_rows)
+        # ---- Move file based on error threshold ----
+        target_dir = DATA_ERR if error_count > ERROR_THRESHOLD else DATA_OUT
+        os.rename(filepath, os.path.join(target_dir, filename))
 
-        daily_rows = [(d, v["quantity"], f"{v['revenue']:.2f}") for d, v in self.daily_totals.items()]
-        daily_rows.sort()
-        write_csv(f"{outdir}/daily_totals.csv", ["Date", "Quantity", "Revenue"], daily_rows)
+        logging.info(
+            f"File done | {filename} | "
+            f"errors={error_count}"
+        )
+
+    # ---- Write analytical reports ----
+    write_reports(RUN_ID, stats)
+
+    logging.info(
+        f"Run summary | files={stats['files']} rows={stats['rows']} "
+        f"valid={stats['valid']} invalid={stats['invalid']} "
+        f"qty={stats['quantity']} revenue={stats['revenue']}"
+    )
+
+    return {
+        "processed": stats["files"],
+        "out": stats["files"],
+        "err": stats["invalid"]
+    }

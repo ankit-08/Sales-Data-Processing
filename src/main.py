@@ -1,89 +1,92 @@
 import os
-import shutil
-import argparse
+import sys
+import time
+import threading
 import logging
-from src.processor import SalesProcessor
 
-ERROR_THRESHOLD = 5
+from .context import RUN_ID
+from .processor import process_all_files
 
-def ensure_dir(path: str):
-    os.makedirs(path, exist_ok=True)
+# ================= PATHS =================
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+LOG_DIR = os.path.join(BASE_DIR, "logs")
+os.makedirs(LOG_DIR, exist_ok=True)
 
-def setup_logging():
-    log_dir = "logs"
-    ensure_dir(log_dir)
-    log_path = os.path.join(log_dir, "system.log")
+LOG_FILE = os.path.join(LOG_DIR, "system.log")
 
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s [%(levelname)s] %(message)s",
-        handlers=[
-            logging.FileHandler(log_path, mode="a", encoding="utf-8"),
-            logging.StreamHandler()
-        ]
+_stop_event = threading.Event()
+
+# ================= LOG RECORD =================
+_old_factory = logging.getLogRecordFactory()
+
+def record_factory(*args, **kwargs):
+    record = _old_factory(*args, **kwargs)
+    record.run_id = RUN_ID
+    return record
+
+logging.setLogRecordFactory(record_factory)
+
+# ================= EMOJI FORMATTER =================
+EMOJI = {
+    logging.INFO: "ℹ️",
+    logging.WARNING: "⚠️",
+    logging.ERROR: "🚫",
+    logging.CRITICAL: "🚫",
+}
+
+class EmojiFormatter(logging.Formatter):
+    def format(self, record):
+        msg = str(record.msg)
+        for e in EMOJI.values():
+            if msg.startswith(e):
+                msg = msg[len(e):].lstrip()
+        record.msg = f"{EMOJI.get(record.levelno, '')} {msg}"
+        return super().format(record)
+
+# ================= LOGGING =================
+LEVELS = {
+    "INFO": logging.INFO,
+    "WARNING": logging.WARNING,
+    "ERROR": logging.ERROR,
+}
+
+def configure_logging(print_console=True, level="INFO"):
+    root = logging.getLogger()
+    root.setLevel(LEVELS.get(level, logging.INFO))
+    root.handlers.clear()
+
+    formatter = EmojiFormatter(
+        "%(asctime)s [%(levelname)s] RunID=%(run_id)s | %(message)s"
     )
 
-    logging.info("🚀 Starting Sales Data Processor")
-    return log_path
+    fh = logging.FileHandler(LOG_FILE, encoding="utf-8")
+    fh.setFormatter(formatter)
+    root.addHandler(fh)
 
-def main():
-    parser = argparse.ArgumentParser(description="Sales Data Processor")
-    parser.add_argument("input_dir", nargs="?", default=os.path.join("data", "in"))
-    parser.add_argument("--out", default="reports")
-    parser.add_argument("--processed", default=os.path.join("data", "out"))
-    parser.add_argument("--error", default=os.path.join("data", "err"))
-    args = parser.parse_args()
+    if print_console:
+        ch = logging.StreamHandler(sys.stdout)
+        ch.setFormatter(formatter)
+        root.addHandler(ch)
 
-    log_path = setup_logging()
+    logging.info("Logging initialized")
 
-    for p in [args.input_dir, args.out, args.processed, args.error]:
-        ensure_dir(p)
+# ================= PROCESS LOOP =================
+def _processor_loop():
+    logging.info("Sales Data Processor started")
 
-    proc = SalesProcessor()
+    while not _stop_event.is_set():
+        summary = process_all_files()
+        if summary.get("processed", 0) == 0:
+            logging.warning("No CSV files found")
+        time.sleep(2)
 
-    csv_files = [
-        os.path.join(args.input_dir, f)
-        for f in os.listdir(args.input_dir)
-        if f.lower().endswith(".csv")
-    ]
+    logging.info("Sales Data Processor stopped")
 
-    if not csv_files:
-        logging.warning("No CSV files found.")
-        return
+# ================= PUBLIC API =================
+def start_file_processing():
+    _stop_event.clear()
+    threading.Thread(target=_processor_loop, daemon=True).start()
 
-    logging.info("Processing %d file(s)...", len(csv_files))
-
-    for csv_path in csv_files:
-        fname = os.path.basename(csv_path)
-        try:
-            errors = proc.process_file(csv_path)
-
-            if errors > ERROR_THRESHOLD:
-                err_path = os.path.join(args.error, fname)
-                shutil.move(csv_path, err_path)
-                logging.warning(
-                    "🚨 File %s moved to ERR (row_errors=%d > %d)",
-                    fname, errors, ERROR_THRESHOLD
-                )
-            else:
-                out_path = os.path.join(args.processed, fname)
-                shutil.move(csv_path, out_path)
-                logging.info(
-                    "✅ File %s processed successfully (row_errors=%d)",
-                    fname, errors
-                )
-
-        except Exception:
-            logging.exception("❌ Fatal error processing %s", fname)
-            try:
-                shutil.move(csv_path, os.path.join(args.error, fname))
-            except Exception as e:
-                logging.error("Failed moving %s: %s", fname, e)
-
-    proc.write_reports(args.out)
-    logging.info("🧾 Reports written to %s", args.out)
-    logging.info("📄 Logs saved to %s", log_path)
-    logging.info("✅ All done!")
-
-if __name__ == "__main__":
-    main()
+def stop_file_processing():
+    _stop_event.set()
+    logging.info("Stop file processing requested")

@@ -1,47 +1,36 @@
-# src/io_utils.py
 import os
-import csv
+import shutil
+import logging
+from datetime import datetime
 
-def list_csv_files(path):
-    """
-    Return a list of csv file paths from 'path'.
-    If path is a file, returns [path] (if .csv). If dir, returns all .csv files (non-recursive).
-    """
-    if os.path.isfile(path):
-        return [path] if path.lower().endswith(".csv") else []
-    if os.path.isdir(path):
-        entries = []
-        for fname in os.listdir(path):
-            full = os.path.join(path, fname)
-            if os.path.isfile(full) and fname.lower().endswith(".csv"):
-                entries.append(full)
-        return sorted(entries)
-    return []
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(PROJECT_ROOT, "data")
 
-def read_csv_rows(filepath, skip_header=True):
-    """
-    Generator that yields rows (lists) from a CSV file.
-    skip_header: if True, skips the first row.
-    """
-    with open(filepath, "r", encoding="utf-8") as f:
-        reader = csv.reader(f)
-        if skip_header:
-            _ = next(reader, None)
-        for row in reader:
-            # Skip fully-blank rows
-            if not any(cell.strip() for cell in row):
-                continue
-            yield row
+INPUT_DIR = os.path.join(DATA_DIR, "in")
+OUTPUT_DIR = os.path.join(DATA_DIR, "out")
+ERROR_DIR = os.path.join(DATA_DIR, "err")
 
-def write_text(path, text):
-    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(text)
+for d in (INPUT_DIR, OUTPUT_DIR, ERROR_DIR):
+    os.makedirs(d, exist_ok=True)
 
-def write_csv(path, header, rows):
-    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
-    with open(path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        if header:
-            writer.writerow(header)
-        writer.writerows(rows)
+def get_input_files():
+    return [
+        os.path.join(INPUT_DIR, f)
+        for f in os.listdir(INPUT_DIR)
+        if f.endswith(".csv")
+    ]
+
+def _move(src, dest_dir):
+    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    name = os.path.basename(src)
+    dest = os.path.join(dest_dir, f"{name}_{ts}")
+    shutil.move(src, dest)
+    return os.path.basename(dest)
+
+def move_to_processed(path, errors):
+    name = _move(path, OUTPUT_DIR)
+    logging.info(f"Moved to OUT: {name} | errors={errors}")
+
+def move_to_error(path, errors):
+    name = _move(path, ERROR_DIR)
+    logging.error(f"Moved to ERR: {name} | errors={errors}")

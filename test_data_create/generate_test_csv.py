@@ -3,14 +3,16 @@ import csv
 import random
 import time
 import threading
+import logging
 from datetime import datetime, timedelta
 
-# --- CONFIGURATION ---
-INTERVAL_SECONDS = 2    # ⏱ Time gap between file generations (now every 30 seconds)
-ROWS_PER_FILE = 100       # Rows per CSV
+# ============================================================
+# CONFIG
+# ============================================================
+INTERVAL_SECONDS = 2
+ROWS_PER_FILE = 100
 START_DATE = datetime(2025, 11, 1)
 
-# --- REALISTIC PRODUCT CATALOG ---
 PRODUCTS = [
     "Samsung 55-inch LED TV",
     "LG Smart Refrigerator",
@@ -34,68 +36,47 @@ PRODUCTS = [
     "Apple iPad Air"
 ]
 
-# --- RESOLVE PROJECT PATH ---
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
 OUTPUT_DIR = os.path.join(PROJECT_ROOT, "data", "in")
-
-# --- ENSURE DIRECTORY EXISTS ---
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# --- CONTROL FLAG ---
-stop_flag = threading.Event()
+_stop_flag = threading.Event()
 
-# --- HELPER FUNCTION ---
-def generate_random_sales_row():
-    """Return one row of fake sales data."""
-    date = (START_DATE + timedelta(days=random.randint(0, 29))).strftime("%Y-%m-%d")
+# ============================================================
+def _generate_row():
+    date = (START_DATE + timedelta(days=random.randint(0, 30))).strftime("%Y-%m-%d")
     product = random.choice(PRODUCTS)
-    quantity = random.randint(1, 10)
-    price = random.uniform(5000, 150000)  # more realistic price range
-    return [date, product, quantity, f"{price:.2f}"]
+    qty = random.randint(1, 10)
+    price = random.randint(1000, 50000)
+    return [date, product, qty, price]
 
-def create_single_csv_file():
-    """Generate one CSV file with timestamp in name."""
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    filename = f"sales_auto_{timestamp}.csv"
-    filepath = os.path.join(OUTPUT_DIR, filename)
+def _run_generator():
+    logging.info("CSV generator started")
+    while not _stop_flag.is_set():
+        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+        fname = f"sales_{ts}.csv"
+        path = os.path.join(OUTPUT_DIR, fname)
 
-    with open(filepath, "w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow(["Date", "Product", "Quantity", "Price"])  # header
-        for _ in range(ROWS_PER_FILE):
-            writer.writerow(generate_random_sales_row())
+        with open(path, "w", newline="", encoding="utf-8") as f:
+            writer = csv.writer(f)
+            writer.writerow(["date", "product", "qty", "price"])
+            for _ in range(ROWS_PER_FILE):
+                writer.writerow(_generate_row())
 
-    print(f"✅ Created: {filepath} ({ROWS_PER_FILE} rows)")
+        logging.info(f"Generated CSV file: {fname}")
 
-# --- MAIN GENERATOR LOOP ---
-def run_generator():
-    print(f"📁 Output folder: {OUTPUT_DIR}")
-    print(f"🕒 A new CSV file will be generated every {INTERVAL_SECONDS} second(s).")
-    print("💡 Type 'stop' and press ENTER to stop the program safely.\n")
-
-    while not stop_flag.is_set():
-        create_single_csv_file()
         for _ in range(INTERVAL_SECONDS):
-            if stop_flag.is_set():
+            if _stop_flag.is_set():
                 break
             time.sleep(1)
-    print("🛑 CSV generator stopped gracefully.")
 
-# --- LISTEN FOR STOP COMMAND ---
-def listen_for_stop():
-    """Wait for the user to type 'stop' to end the program."""
-    while True:
-        user_input = input().strip().lower()
-        if user_input in ("stop", "exit", "quit"):
-            stop_flag.set()
-            break
+    logging.info("CSV generator stopped")
 
-# --- ENTRY POINT ---
-if __name__ == "__main__":
-    # Start the listener in a separate thread
-    listener_thread = threading.Thread(target=listen_for_stop, daemon=True)
-    listener_thread.start()
+def start_csv_generator():
+    _stop_flag.clear()
+    threading.Thread(target=_run_generator, daemon=True).start()
 
-    # Start the generator
-    run_generator()
+def stop_csv_generator():
+    _stop_flag.set()
+    logging.info("Stop CSV generator requested")

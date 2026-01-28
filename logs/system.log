@@ -1,0 +1,596 @@
+2026-01-28 22:33:40,758 [INFO] RunID=b9011a | ℹ️ Logging initialized
+2026-01-28 22:33:40,760 [INFO] RunID=b9011a | ℹ️ CSV generator started
+2026-01-28 22:33:40,774 [INFO] RunID=b9011a | ℹ️ Generated CSV file: sales_20260128_223340.csv
+2026-01-28 22:33:42,354 [INFO] RunID=b9011a | ℹ️ Logging initialized
+2026-01-28 22:33:42,362 [INFO] RunID=b9011a | ℹ️ Sales Data Processor started
+2026-01-28 22:33:42,362 [INFO] RunID=b9011a | ℹ️ Processing file: sales_20260128_223340.csv
+2026-01-28 22:33:42,488 [INFO] RunID=b9011a | ℹ️ File done | sales_20260128_223340.csv | errors=0
+2026-01-28 22:33:42,488 [INFO] RunID=b9011a | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=604 revenue=17227959.0
+2026-01-28 22:33:42,782 [INFO] RunID=b9011a | ℹ️ Generated CSV file: sales_20260128_223342.csv
+2026-01-28 22:33:44,497 [INFO] RunID=b9011a | ℹ️ Processing file: sales_20260128_223342.csv
+2026-01-28 22:33:44,516 [INFO] RunID=b9011a | ℹ️ File done | sales_20260128_223342.csv | errors=0
+2026-01-28 22:33:44,519 [INFO] RunID=b9011a | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=594 revenue=16255660.0
+2026-01-28 22:33:44,785 [INFO] RunID=b9011a | ℹ️ Generated CSV file: sales_20260128_223344.csv
+2026-01-28 22:33:46,522 [INFO] RunID=b9011a | ℹ️ Processing file: sales_20260128_223344.csv
+2026-01-28 22:33:46,545 [INFO] RunID=b9011a | ℹ️ File done | sales_20260128_223344.csv | errors=0
+2026-01-28 22:33:46,545 [INFO] RunID=b9011a | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=569 revenue=15328489.0
+2026-01-28 22:33:46,802 [INFO] RunID=b9011a | ℹ️ Generated CSV file: sales_20260128_223346.csv
+2026-01-28 22:33:48,548 [INFO] RunID=b9011a | ℹ️ Processing file: sales_20260128_223346.csv
+2026-01-28 22:33:48,577 [INFO] RunID=b9011a | ℹ️ File done | sales_20260128_223346.csv | errors=0
+2026-01-28 22:33:48,578 [INFO] RunID=b9011a | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=552 revenue=15669461.0
+2026-01-28 22:33:48,808 [INFO] RunID=b9011a | ℹ️ Generated CSV file: sales_20260128_223348.csv
+2026-01-28 22:33:50,579 [INFO] RunID=b9011a | ℹ️ Processing file: sales_20260128_223348.csv
+2026-01-28 22:33:50,621 [INFO] RunID=b9011a | ℹ️ File done | sales_20260128_223348.csv | errors=0
+2026-01-28 22:33:50,628 [INFO] RunID=b9011a | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=533 revenue=14051290.0
+2026-01-28 22:33:50,812 [INFO] RunID=b9011a | ℹ️ Generated CSV file: sales_20260128_223350.csv
+2026-01-28 22:33:52,630 [INFO] RunID=b9011a | ℹ️ Processing file: sales_20260128_223350.csv
+2026-01-28 22:33:52,652 [INFO] RunID=b9011a | ℹ️ File done | sales_20260128_223350.csv | errors=0
+2026-01-28 22:33:52,659 [INFO] RunID=b9011a | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=545 revenue=12574641.0
+2026-01-28 22:33:52,820 [INFO] RunID=b9011a | ℹ️ Generated CSV file: sales_20260128_223352.csv
+2026-01-28 22:33:54,660 [INFO] RunID=b9011a | ℹ️ Processing file: sales_20260128_223352.csv
+2026-01-28 22:33:54,698 [INFO] RunID=b9011a | ℹ️ File done | sales_20260128_223352.csv | errors=0
+2026-01-28 22:33:54,699 [INFO] RunID=b9011a | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=566 revenue=13091917.0
+2026-01-28 22:33:54,917 [INFO] RunID=b9011a | ℹ️ Generated CSV file: sales_20260128_223354.csv
+2026-01-28 22:33:56,703 [INFO] RunID=b9011a | ℹ️ Processing file: sales_20260128_223354.csv
+2026-01-28 22:33:56,781 [INFO] RunID=b9011a | ℹ️ File done | sales_20260128_223354.csv | errors=0
+2026-01-28 22:33:56,781 [INFO] RunID=b9011a | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=544 revenue=12569312.0
+2026-01-28 22:33:56,924 [INFO] RunID=b9011a | ℹ️ Generated CSV file: sales_20260128_223356.csv
+2026-01-28 22:33:58,786 [INFO] RunID=b9011a | ℹ️ Processing file: sales_20260128_223356.csv
+2026-01-28 22:33:58,810 [INFO] RunID=b9011a | ℹ️ File done | sales_20260128_223356.csv | errors=0
+2026-01-28 22:33:58,810 [INFO] RunID=b9011a | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=498 revenue=12304635.0
+2026-01-28 22:33:58,940 [INFO] RunID=b9011a | ℹ️ Generated CSV file: sales_20260128_223358.csv
+2026-01-28 22:34:00,815 [INFO] RunID=b9011a | ℹ️ Processing file: sales_20260128_223358.csv
+2026-01-28 22:34:00,845 [INFO] RunID=b9011a | ℹ️ File done | sales_20260128_223358.csv | errors=0
+2026-01-28 22:34:00,850 [INFO] RunID=b9011a | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=538 revenue=12662003.0
+2026-01-28 22:34:00,946 [INFO] RunID=b9011a | ℹ️ Generated CSV file: sales_20260128_223400.csv
+2026-01-28 22:34:02,851 [INFO] RunID=b9011a | ℹ️ Processing file: sales_20260128_223400.csv
+2026-01-28 22:34:02,870 [INFO] RunID=b9011a | ℹ️ File done | sales_20260128_223400.csv | errors=0
+2026-01-28 22:34:02,870 [INFO] RunID=b9011a | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=593 revenue=14818698.0
+2026-01-28 22:34:02,966 [INFO] RunID=b9011a | ℹ️ Generated CSV file: sales_20260128_223402.csv
+2026-01-28 22:34:04,873 [INFO] RunID=b9011a | ℹ️ Processing file: sales_20260128_223402.csv
+2026-01-28 22:34:04,905 [INFO] RunID=b9011a | ℹ️ File done | sales_20260128_223402.csv | errors=0
+2026-01-28 22:34:04,911 [INFO] RunID=b9011a | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=538 revenue=14350439.0
+2026-01-28 22:34:04,988 [INFO] RunID=b9011a | ℹ️ Generated CSV file: sales_20260128_223404.csv
+2026-01-28 22:34:06,913 [INFO] RunID=b9011a | ℹ️ Processing file: sales_20260128_223404.csv
+2026-01-28 22:34:06,933 [INFO] RunID=b9011a | ℹ️ File done | sales_20260128_223404.csv | errors=0
+2026-01-28 22:34:06,934 [INFO] RunID=b9011a | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=554 revenue=14624347.0
+2026-01-28 22:34:07,059 [INFO] RunID=b9011a | ℹ️ Generated CSV file: sales_20260128_223406.csv
+2026-01-28 22:34:08,936 [INFO] RunID=b9011a | ℹ️ Processing file: sales_20260128_223406.csv
+2026-01-28 22:34:08,951 [INFO] RunID=b9011a | ℹ️ File done | sales_20260128_223406.csv | errors=0
+2026-01-28 22:34:08,951 [INFO] RunID=b9011a | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=591 revenue=13965980.0
+2026-01-28 22:34:09,066 [INFO] RunID=b9011a | ℹ️ Generated CSV file: sales_20260128_223409.csv
+2026-01-28 22:34:10,953 [INFO] RunID=b9011a | ℹ️ Processing file: sales_20260128_223409.csv
+2026-01-28 22:34:10,978 [INFO] RunID=b9011a | ℹ️ File done | sales_20260128_223409.csv | errors=0
+2026-01-28 22:34:10,983 [INFO] RunID=b9011a | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=542 revenue=15966033.0
+2026-01-28 22:34:11,110 [INFO] RunID=b9011a | ℹ️ Generated CSV file: sales_20260128_223411.csv
+2026-01-28 22:34:12,985 [INFO] RunID=b9011a | ℹ️ Processing file: sales_20260128_223411.csv
+2026-01-28 22:34:13,021 [INFO] RunID=b9011a | ℹ️ File done | sales_20260128_223411.csv | errors=0
+2026-01-28 22:34:13,021 [INFO] RunID=b9011a | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=565 revenue=15328734.0
+2026-01-28 22:34:13,115 [INFO] RunID=b9011a | ℹ️ Generated CSV file: sales_20260128_223413.csv
+2026-01-28 22:34:15,025 [INFO] RunID=b9011a | ℹ️ Processing file: sales_20260128_223413.csv
+2026-01-28 22:34:15,091 [INFO] RunID=b9011a | ℹ️ File done | sales_20260128_223413.csv | errors=0
+2026-01-28 22:34:15,091 [INFO] RunID=b9011a | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=528 revenue=14148658.0
+2026-01-28 22:34:15,119 [INFO] RunID=b9011a | ℹ️ Generated CSV file: sales_20260128_223415.csv
+2026-01-28 22:34:17,122 [INFO] RunID=b9011a | ℹ️ Processing file: sales_20260128_223415.csv
+2026-01-28 22:34:17,122 [INFO] RunID=b9011a | ℹ️ Generated CSV file: sales_20260128_223417.csv
+2026-01-28 22:34:17,170 [INFO] RunID=b9011a | ℹ️ File done | sales_20260128_223415.csv | errors=0
+2026-01-28 22:34:17,185 [INFO] RunID=b9011a | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=568 revenue=13778093.0
+2026-01-28 22:34:19,136 [INFO] RunID=b9011a | ℹ️ Generated CSV file: sales_20260128_223419.csv
+2026-01-28 22:34:19,190 [INFO] RunID=b9011a | ℹ️ Processing file: sales_20260128_223417.csv
+2026-01-28 22:34:19,250 [INFO] RunID=b9011a | ℹ️ File done | sales_20260128_223417.csv | errors=0
+2026-01-28 22:34:19,250 [INFO] RunID=b9011a | ℹ️ Processing file: sales_20260128_223419.csv
+2026-01-28 22:34:19,264 [INFO] RunID=b9011a | ℹ️ File done | sales_20260128_223419.csv | errors=0
+2026-01-28 22:34:19,264 [INFO] RunID=b9011a | ℹ️ Run summary | files=2 rows=200 valid=200 invalid=0 qty=1124 revenue=29290446.0
+2026-01-28 22:34:20,930 [INFO] RunID=b9011a | ℹ️ Stop CSV generator requested
+2026-01-28 22:34:20,932 [INFO] RunID=b9011a | ℹ️ Stop file processing requested
+2026-01-28 22:34:35,167 [INFO] RunID=e07db0 | ℹ️ Logging initialized
+2026-01-28 22:34:35,171 [INFO] RunID=e07db0 | ℹ️ CSV generator started
+2026-01-28 22:34:35,181 [INFO] RunID=e07db0 | ℹ️ Generated CSV file: sales_20260128_223435.csv
+2026-01-28 22:34:36,242 [INFO] RunID=e07db0 | ℹ️ Logging initialized
+2026-01-28 22:34:36,248 [INFO] RunID=e07db0 | ℹ️ Sales Data Processor started
+2026-01-28 22:34:36,248 [INFO] RunID=e07db0 | ℹ️ Processing file: sales_20260128_223435.csv
+2026-01-28 22:34:36,269 [INFO] RunID=e07db0 | ℹ️ File done | sales_20260128_223435.csv | errors=0
+2026-01-28 22:34:36,273 [INFO] RunID=e07db0 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=512 revenue=13773700.0
+2026-01-28 22:34:37,184 [INFO] RunID=e07db0 | ℹ️ Generated CSV file: sales_20260128_223437.csv
+2026-01-28 22:34:38,275 [INFO] RunID=e07db0 | ℹ️ Processing file: sales_20260128_223437.csv
+2026-01-28 22:34:38,349 [INFO] RunID=e07db0 | ℹ️ File done | sales_20260128_223437.csv | errors=0
+2026-01-28 22:34:38,349 [INFO] RunID=e07db0 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=539 revenue=13029043.0
+2026-01-28 22:34:39,191 [INFO] RunID=e07db0 | ℹ️ Generated CSV file: sales_20260128_223439.csv
+2026-01-28 22:34:40,352 [INFO] RunID=e07db0 | ℹ️ Processing file: sales_20260128_223439.csv
+2026-01-28 22:34:40,669 [INFO] RunID=e07db0 | ℹ️ File done | sales_20260128_223439.csv | errors=0
+2026-01-28 22:34:40,670 [INFO] RunID=e07db0 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=546 revenue=14658657.0
+2026-01-28 22:34:41,207 [INFO] RunID=e07db0 | ℹ️ Generated CSV file: sales_20260128_223441.csv
+2026-01-28 22:34:42,672 [INFO] RunID=e07db0 | ℹ️ Processing file: sales_20260128_223441.csv
+2026-01-28 22:34:42,700 [INFO] RunID=e07db0 | ℹ️ File done | sales_20260128_223441.csv | errors=0
+2026-01-28 22:34:42,700 [INFO] RunID=e07db0 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=575 revenue=15784468.0
+2026-01-28 22:34:43,214 [INFO] RunID=e07db0 | ℹ️ Generated CSV file: sales_20260128_223443.csv
+2026-01-28 22:34:44,706 [INFO] RunID=e07db0 | ℹ️ Processing file: sales_20260128_223443.csv
+2026-01-28 22:34:44,732 [INFO] RunID=e07db0 | ℹ️ File done | sales_20260128_223443.csv | errors=0
+2026-01-28 22:34:44,738 [INFO] RunID=e07db0 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=545 revenue=14564836.0
+2026-01-28 22:34:45,224 [INFO] RunID=e07db0 | ℹ️ Generated CSV file: sales_20260128_223445.csv
+2026-01-28 22:34:46,741 [INFO] RunID=e07db0 | ℹ️ Processing file: sales_20260128_223445.csv
+2026-01-28 22:34:46,757 [INFO] RunID=e07db0 | ℹ️ File done | sales_20260128_223445.csv | errors=0
+2026-01-28 22:34:46,760 [INFO] RunID=e07db0 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=530 revenue=13208524.0
+2026-01-28 22:34:47,227 [INFO] RunID=e07db0 | ℹ️ Generated CSV file: sales_20260128_223447.csv
+2026-01-28 22:34:48,763 [INFO] RunID=e07db0 | ℹ️ Processing file: sales_20260128_223447.csv
+2026-01-28 22:34:48,796 [INFO] RunID=e07db0 | ℹ️ File done | sales_20260128_223447.csv | errors=0
+2026-01-28 22:34:48,796 [INFO] RunID=e07db0 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=508 revenue=12021580.0
+2026-01-28 22:34:49,234 [INFO] RunID=e07db0 | ℹ️ Generated CSV file: sales_20260128_223449.csv
+2026-01-28 22:34:50,800 [INFO] RunID=e07db0 | ℹ️ Processing file: sales_20260128_223449.csv
+2026-01-28 22:34:50,830 [INFO] RunID=e07db0 | ℹ️ File done | sales_20260128_223449.csv | errors=0
+2026-01-28 22:34:50,830 [INFO] RunID=e07db0 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=529 revenue=13509560.0
+2026-01-28 22:34:51,249 [INFO] RunID=e07db0 | ℹ️ Generated CSV file: sales_20260128_223451.csv
+2026-01-28 22:34:52,835 [INFO] RunID=e07db0 | ℹ️ Processing file: sales_20260128_223451.csv
+2026-01-28 22:34:52,865 [INFO] RunID=e07db0 | ℹ️ File done | sales_20260128_223451.csv | errors=0
+2026-01-28 22:34:52,870 [INFO] RunID=e07db0 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=588 revenue=13978317.0
+2026-01-28 22:34:53,258 [INFO] RunID=e07db0 | ℹ️ Generated CSV file: sales_20260128_223453.csv
+2026-01-28 22:34:54,872 [INFO] RunID=e07db0 | ℹ️ Processing file: sales_20260128_223453.csv
+2026-01-28 22:34:54,893 [INFO] RunID=e07db0 | ℹ️ File done | sales_20260128_223453.csv | errors=0
+2026-01-28 22:34:54,893 [INFO] RunID=e07db0 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=474 revenue=11126304.0
+2026-01-28 22:34:55,265 [INFO] RunID=e07db0 | ℹ️ Generated CSV file: sales_20260128_223455.csv
+2026-01-28 22:34:56,903 [INFO] RunID=e07db0 | ℹ️ Processing file: sales_20260128_223455.csv
+2026-01-28 22:34:56,912 [INFO] RunID=e07db0 | ℹ️ File done | sales_20260128_223455.csv | errors=0
+2026-01-28 22:34:56,918 [INFO] RunID=e07db0 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=565 revenue=15132804.0
+2026-01-28 22:34:57,276 [INFO] RunID=e07db0 | ℹ️ Generated CSV file: sales_20260128_223457.csv
+2026-01-28 22:34:58,921 [INFO] RunID=e07db0 | ℹ️ Processing file: sales_20260128_223457.csv
+2026-01-28 22:34:58,950 [INFO] RunID=e07db0 | ℹ️ File done | sales_20260128_223457.csv | errors=0
+2026-01-28 22:34:58,952 [INFO] RunID=e07db0 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=561 revenue=14778006.0
+2026-01-28 22:34:59,286 [INFO] RunID=e07db0 | ℹ️ Generated CSV file: sales_20260128_223459.csv
+2026-01-28 22:35:00,956 [INFO] RunID=e07db0 | ℹ️ Processing file: sales_20260128_223459.csv
+2026-01-28 22:35:00,984 [INFO] RunID=e07db0 | ℹ️ File done | sales_20260128_223459.csv | errors=0
+2026-01-28 22:35:00,984 [INFO] RunID=e07db0 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=546 revenue=13367911.0
+2026-01-28 22:35:01,291 [INFO] RunID=e07db0 | ℹ️ Generated CSV file: sales_20260128_223501.csv
+2026-01-28 22:35:02,990 [INFO] RunID=e07db0 | ℹ️ Processing file: sales_20260128_223501.csv
+2026-01-28 22:35:03,019 [INFO] RunID=e07db0 | ℹ️ File done | sales_20260128_223501.csv | errors=0
+2026-01-28 22:35:03,019 [INFO] RunID=e07db0 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=583 revenue=16618832.0
+2026-01-28 22:35:03,301 [INFO] RunID=e07db0 | ℹ️ Generated CSV file: sales_20260128_223503.csv
+2026-01-28 22:35:03,366 [INFO] RunID=e07db0 | ℹ️ Stop CSV generator requested
+2026-01-28 22:35:03,382 [INFO] RunID=e07db0 | ℹ️ Stop file processing requested
+2026-01-28 22:42:31,962 [INFO] RunID=4154e6 | ℹ️ Logging initialized
+2026-01-28 22:42:31,962 [INFO] RunID=4154e6 | ℹ️ CSV generator started
+2026-01-28 22:42:31,971 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224231.csv
+2026-01-28 22:42:33,981 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224233.csv
+2026-01-28 22:42:34,548 [INFO] RunID=4154e6 | ℹ️ Logging initialized
+2026-01-28 22:42:34,554 [INFO] RunID=4154e6 | ℹ️ Sales Data Processor started
+2026-01-28 22:42:34,556 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_223503.csv
+2026-01-28 22:42:34,633 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_223503.csv | errors=0
+2026-01-28 22:42:34,633 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224231.csv
+2026-01-28 22:42:34,654 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224231.csv | errors=0
+2026-01-28 22:42:34,654 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224233.csv
+2026-01-28 22:42:34,666 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224233.csv | errors=0
+2026-01-28 22:42:34,689 [INFO] RunID=4154e6 | ℹ️ Run summary | files=3 rows=300 valid=300 invalid=0 qty=1683 revenue=42688109.0
+2026-01-28 22:42:35,986 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224235.csv
+2026-01-28 22:42:36,694 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224235.csv
+2026-01-28 22:42:36,715 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224235.csv | errors=0
+2026-01-28 22:42:36,718 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=547 revenue=13239921.0
+2026-01-28 22:42:37,992 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224237.csv
+2026-01-28 22:42:38,719 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224237.csv
+2026-01-28 22:42:38,737 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224237.csv | errors=0
+2026-01-28 22:42:38,737 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=578 revenue=14434989.0
+2026-01-28 22:42:40,003 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224240.csv
+2026-01-28 22:42:40,739 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224240.csv
+2026-01-28 22:42:40,753 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224240.csv | errors=0
+2026-01-28 22:42:40,754 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=520 revenue=13846346.0
+2026-01-28 22:42:42,009 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224242.csv
+2026-01-28 22:42:42,756 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224242.csv
+2026-01-28 22:42:42,831 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224242.csv | errors=0
+2026-01-28 22:42:42,833 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=590 revenue=16183922.0
+2026-01-28 22:42:44,016 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224244.csv
+2026-01-28 22:42:44,834 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224244.csv
+2026-01-28 22:42:44,860 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224244.csv | errors=0
+2026-01-28 22:42:44,860 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=559 revenue=13100586.0
+2026-01-28 22:42:46,024 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224246.csv
+2026-01-28 22:42:46,862 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224246.csv
+2026-01-28 22:42:46,884 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224246.csv | errors=0
+2026-01-28 22:42:46,884 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=591 revenue=15395469.0
+2026-01-28 22:42:48,103 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224248.csv
+2026-01-28 22:42:48,886 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224248.csv
+2026-01-28 22:42:48,904 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224248.csv | errors=0
+2026-01-28 22:42:48,910 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=583 revenue=16089469.0
+2026-01-28 22:42:50,110 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224250.csv
+2026-01-28 22:42:50,912 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224250.csv
+2026-01-28 22:42:50,941 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224250.csv | errors=0
+2026-01-28 22:42:50,941 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=550 revenue=14965173.0
+2026-01-28 22:42:52,114 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224252.csv
+2026-01-28 22:42:52,945 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224252.csv
+2026-01-28 22:42:52,970 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224252.csv | errors=0
+2026-01-28 22:42:52,976 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=524 revenue=13338065.0
+2026-01-28 22:42:54,126 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224254.csv
+2026-01-28 22:42:54,977 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224254.csv
+2026-01-28 22:42:55,051 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224254.csv | errors=0
+2026-01-28 22:42:55,055 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=544 revenue=13161502.0
+2026-01-28 22:42:56,137 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224256.csv
+2026-01-28 22:42:57,058 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224256.csv
+2026-01-28 22:42:57,072 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224256.csv | errors=0
+2026-01-28 22:42:57,072 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=560 revenue=13948103.0
+2026-01-28 22:42:58,139 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224258.csv
+2026-01-28 22:42:59,081 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224258.csv
+2026-01-28 22:42:59,108 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224258.csv | errors=0
+2026-01-28 22:42:59,109 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=512 revenue=13346460.0
+2026-01-28 22:43:00,148 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224300.csv
+2026-01-28 22:43:01,112 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224300.csv
+2026-01-28 22:43:01,139 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224300.csv | errors=0
+2026-01-28 22:43:01,144 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=568 revenue=13875823.0
+2026-01-28 22:43:02,154 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224302.csv
+2026-01-28 22:43:03,145 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224302.csv
+2026-01-28 22:43:03,172 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224302.csv | errors=0
+2026-01-28 22:43:03,181 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=594 revenue=14173426.0
+2026-01-28 22:43:04,216 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224304.csv
+2026-01-28 22:43:05,183 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224304.csv
+2026-01-28 22:43:05,219 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224304.csv | errors=0
+2026-01-28 22:43:05,219 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=487 revenue=12041163.0
+2026-01-28 22:43:06,225 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224306.csv
+2026-01-28 22:43:07,224 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224306.csv
+2026-01-28 22:43:07,261 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224306.csv | errors=0
+2026-01-28 22:43:07,261 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=606 revenue=16275733.0
+2026-01-28 22:43:08,228 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224308.csv
+2026-01-28 22:43:09,272 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224308.csv
+2026-01-28 22:43:09,306 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224308.csv | errors=0
+2026-01-28 22:43:09,312 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=537 revenue=14349803.0
+2026-01-28 22:43:10,241 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224310.csv
+2026-01-28 22:43:11,313 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224310.csv
+2026-01-28 22:43:11,348 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224310.csv | errors=0
+2026-01-28 22:43:11,348 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=538 revenue=13105966.0
+2026-01-28 22:43:12,246 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224312.csv
+2026-01-28 22:43:13,354 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224312.csv
+2026-01-28 22:43:13,381 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224312.csv | errors=0
+2026-01-28 22:43:13,381 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=505 revenue=12622162.0
+2026-01-28 22:43:14,252 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224314.csv
+2026-01-28 22:43:15,387 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224314.csv
+2026-01-28 22:43:15,416 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224314.csv | errors=0
+2026-01-28 22:43:15,416 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=533 revenue=14857016.0
+2026-01-28 22:43:16,262 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224316.csv
+2026-01-28 22:43:17,421 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224316.csv
+2026-01-28 22:43:17,458 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224316.csv | errors=0
+2026-01-28 22:43:17,458 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=522 revenue=12344507.0
+2026-01-28 22:43:18,273 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224318.csv
+2026-01-28 22:43:19,498 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224318.csv
+2026-01-28 22:43:19,506 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224318.csv | errors=0
+2026-01-28 22:43:19,563 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=522 revenue=14465397.0
+2026-01-28 22:43:20,279 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224320.csv
+2026-01-28 22:43:21,579 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224320.csv
+2026-01-28 22:43:21,656 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224320.csv | errors=0
+2026-01-28 22:43:21,663 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=586 revenue=15732181.0
+2026-01-28 22:43:22,285 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224322.csv
+2026-01-28 22:43:23,665 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224322.csv
+2026-01-28 22:43:23,703 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224322.csv | errors=0
+2026-01-28 22:43:23,703 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=572 revenue=13705432.0
+2026-01-28 22:43:24,291 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224324.csv
+2026-01-28 22:43:25,706 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224324.csv
+2026-01-28 22:43:25,773 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224324.csv | errors=0
+2026-01-28 22:43:25,780 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=578 revenue=14993273.0
+2026-01-28 22:43:26,296 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224326.csv
+2026-01-28 22:43:27,782 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224326.csv
+2026-01-28 22:43:27,800 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224326.csv | errors=0
+2026-01-28 22:43:27,804 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=582 revenue=15071623.0
+2026-01-28 22:43:28,305 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224328.csv
+2026-01-28 22:43:29,805 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224328.csv
+2026-01-28 22:43:29,832 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224328.csv | errors=0
+2026-01-28 22:43:29,835 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=513 revenue=12297200.0
+2026-01-28 22:43:30,310 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224330.csv
+2026-01-28 22:43:31,837 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224330.csv
+2026-01-28 22:43:31,850 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224330.csv | errors=0
+2026-01-28 22:43:31,850 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=519 revenue=12828103.0
+2026-01-28 22:43:32,315 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224332.csv
+2026-01-28 22:43:33,853 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224332.csv
+2026-01-28 22:43:33,920 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224332.csv | errors=0
+2026-01-28 22:43:33,928 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=491 revenue=13963389.0
+2026-01-28 22:43:34,320 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224334.csv
+2026-01-28 22:43:35,930 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224334.csv
+2026-01-28 22:43:36,010 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224334.csv | errors=0
+2026-01-28 22:43:36,013 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=574 revenue=15096884.0
+2026-01-28 22:43:36,327 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224336.csv
+2026-01-28 22:43:38,015 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224336.csv
+2026-01-28 22:43:38,039 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224336.csv | errors=0
+2026-01-28 22:43:38,041 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=543 revenue=13661066.0
+2026-01-28 22:43:38,331 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224338.csv
+2026-01-28 22:43:40,042 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224338.csv
+2026-01-28 22:43:40,064 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224338.csv | errors=0
+2026-01-28 22:43:40,064 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=514 revenue=14715513.0
+2026-01-28 22:43:40,337 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224340.csv
+2026-01-28 22:43:42,069 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224340.csv
+2026-01-28 22:43:42,082 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224340.csv | errors=0
+2026-01-28 22:43:42,082 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=538 revenue=13333732.0
+2026-01-28 22:43:42,341 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224342.csv
+2026-01-28 22:43:44,084 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224342.csv
+2026-01-28 22:43:44,107 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224342.csv | errors=0
+2026-01-28 22:43:44,112 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=526 revenue=13201816.0
+2026-01-28 22:43:44,380 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224344.csv
+2026-01-28 22:43:46,114 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224344.csv
+2026-01-28 22:43:46,141 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224344.csv | errors=0
+2026-01-28 22:43:46,142 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=564 revenue=14974616.0
+2026-01-28 22:43:46,383 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224346.csv
+2026-01-28 22:43:48,143 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224346.csv
+2026-01-28 22:43:48,162 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224346.csv | errors=0
+2026-01-28 22:43:48,167 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=598 revenue=16154216.0
+2026-01-28 22:43:48,386 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224348.csv
+2026-01-28 22:43:50,168 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224348.csv
+2026-01-28 22:43:50,189 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224348.csv | errors=0
+2026-01-28 22:43:50,195 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=544 revenue=13646074.0
+2026-01-28 22:43:50,393 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224350.csv
+2026-01-28 22:43:52,197 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224350.csv
+2026-01-28 22:43:52,266 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224350.csv | errors=0
+2026-01-28 22:43:52,268 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=565 revenue=13178980.0
+2026-01-28 22:43:52,398 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224352.csv
+2026-01-28 22:43:54,269 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224352.csv
+2026-01-28 22:43:54,294 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224352.csv | errors=0
+2026-01-28 22:43:54,295 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=573 revenue=15675797.0
+2026-01-28 22:43:54,403 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224354.csv
+2026-01-28 22:43:56,298 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224354.csv
+2026-01-28 22:43:56,321 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224354.csv | errors=0
+2026-01-28 22:43:56,325 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=555 revenue=14270636.0
+2026-01-28 22:43:56,406 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224356.csv
+2026-01-28 22:43:58,329 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224356.csv
+2026-01-28 22:43:58,389 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224356.csv | errors=0
+2026-01-28 22:43:58,391 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=511 revenue=12526915.0
+2026-01-28 22:43:58,408 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224358.csv
+2026-01-28 22:44:00,391 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224358.csv
+2026-01-28 22:44:00,412 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224358.csv | errors=0
+2026-01-28 22:44:00,412 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224400.csv
+2026-01-28 22:44:00,419 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=559 revenue=14896926.0
+2026-01-28 22:44:02,421 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224400.csv
+2026-01-28 22:44:02,422 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224402.csv
+2026-01-28 22:44:02,460 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224400.csv | errors=0
+2026-01-28 22:44:02,460 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224402.csv
+2026-01-28 22:44:02,480 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224402.csv | errors=0
+2026-01-28 22:44:02,485 [INFO] RunID=4154e6 | ℹ️ Run summary | files=2 rows=200 valid=200 invalid=0 qty=1088 revenue=27904640.0
+2026-01-28 22:44:04,427 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224404.csv
+2026-01-28 22:44:04,487 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224404.csv
+2026-01-28 22:44:04,510 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224404.csv | errors=0
+2026-01-28 22:44:04,615 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=564 revenue=15478081.0
+2026-01-28 22:44:06,432 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224406.csv
+2026-01-28 22:44:06,656 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224406.csv
+2026-01-28 22:44:06,673 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224406.csv | errors=0
+2026-01-28 22:44:06,675 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=555 revenue=15276907.0
+2026-01-28 22:44:08,441 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224408.csv
+2026-01-28 22:44:08,677 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224408.csv
+2026-01-28 22:44:08,689 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224408.csv | errors=0
+2026-01-28 22:44:08,689 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=505 revenue=13986700.0
+2026-01-28 22:44:10,444 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224410.csv
+2026-01-28 22:44:10,695 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224410.csv
+2026-01-28 22:44:10,723 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224410.csv | errors=0
+2026-01-28 22:44:10,723 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=512 revenue=11673456.0
+2026-01-28 22:44:12,448 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224412.csv
+2026-01-28 22:44:12,726 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224412.csv
+2026-01-28 22:44:12,746 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224412.csv | errors=0
+2026-01-28 22:44:12,747 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=547 revenue=13896286.0
+2026-01-28 22:44:14,452 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224414.csv
+2026-01-28 22:44:14,748 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224414.csv
+2026-01-28 22:44:14,766 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224414.csv | errors=0
+2026-01-28 22:44:14,766 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=517 revenue=12990426.0
+2026-01-28 22:44:16,457 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224416.csv
+2026-01-28 22:44:16,770 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224416.csv
+2026-01-28 22:44:16,797 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224416.csv | errors=0
+2026-01-28 22:44:16,802 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=502 revenue=11419140.0
+2026-01-28 22:44:18,464 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224418.csv
+2026-01-28 22:44:18,803 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224418.csv
+2026-01-28 22:44:18,816 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224418.csv | errors=0
+2026-01-28 22:44:18,818 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=576 revenue=16311636.0
+2026-01-28 22:44:20,468 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224420.csv
+2026-01-28 22:44:20,821 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224420.csv
+2026-01-28 22:44:20,847 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224420.csv | errors=0
+2026-01-28 22:44:20,849 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=602 revenue=16681972.0
+2026-01-28 22:44:22,471 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224422.csv
+2026-01-28 22:44:22,851 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224422.csv
+2026-01-28 22:44:22,866 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224422.csv | errors=0
+2026-01-28 22:44:22,868 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=555 revenue=12891531.0
+2026-01-28 22:44:24,476 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224424.csv
+2026-01-28 22:44:24,870 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224424.csv
+2026-01-28 22:44:24,893 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224424.csv | errors=0
+2026-01-28 22:44:24,893 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=539 revenue=15090413.0
+2026-01-28 22:44:26,481 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224426.csv
+2026-01-28 22:44:26,898 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224426.csv
+2026-01-28 22:44:26,916 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224426.csv | errors=0
+2026-01-28 22:44:26,918 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=568 revenue=13118632.0
+2026-01-28 22:44:28,482 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224428.csv
+2026-01-28 22:44:28,921 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224428.csv
+2026-01-28 22:44:28,947 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224428.csv | errors=0
+2026-01-28 22:44:28,947 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=525 revenue=13057666.0
+2026-01-28 22:44:30,490 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224430.csv
+2026-01-28 22:44:30,950 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224430.csv
+2026-01-28 22:44:30,976 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224430.csv | errors=0
+2026-01-28 22:44:30,985 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=569 revenue=16235860.0
+2026-01-28 22:44:32,494 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224432.csv
+2026-01-28 22:44:32,986 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224432.csv
+2026-01-28 22:44:33,006 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224432.csv | errors=0
+2026-01-28 22:44:33,006 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=572 revenue=14343738.0
+2026-01-28 22:44:34,501 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224434.csv
+2026-01-28 22:44:35,009 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224434.csv
+2026-01-28 22:44:35,032 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224434.csv | errors=0
+2026-01-28 22:44:35,032 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=503 revenue=11735288.0
+2026-01-28 22:44:36,512 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224436.csv
+2026-01-28 22:44:37,034 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224436.csv
+2026-01-28 22:44:37,062 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224436.csv | errors=0
+2026-01-28 22:44:37,067 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=522 revenue=14808766.0
+2026-01-28 22:44:38,519 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224438.csv
+2026-01-28 22:44:39,068 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224438.csv
+2026-01-28 22:44:39,084 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224438.csv | errors=0
+2026-01-28 22:44:39,084 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=485 revenue=13830374.0
+2026-01-28 22:44:40,522 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224440.csv
+2026-01-28 22:44:41,088 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224440.csv
+2026-01-28 22:44:41,106 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224440.csv | errors=0
+2026-01-28 22:44:41,112 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=534 revenue=14069294.0
+2026-01-28 22:44:42,535 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224442.csv
+2026-01-28 22:44:43,113 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224442.csv
+2026-01-28 22:44:43,130 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224442.csv | errors=0
+2026-01-28 22:44:43,133 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=569 revenue=13845073.0
+2026-01-28 22:44:44,539 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224444.csv
+2026-01-28 22:44:45,136 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224444.csv
+2026-01-28 22:44:45,166 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224444.csv | errors=0
+2026-01-28 22:44:45,166 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=557 revenue=15109893.0
+2026-01-28 22:44:46,654 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224446.csv
+2026-01-28 22:44:47,170 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224446.csv
+2026-01-28 22:44:47,192 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224446.csv | errors=0
+2026-01-28 22:44:47,192 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=469 revenue=11898941.0
+2026-01-28 22:44:48,662 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224448.csv
+2026-01-28 22:44:49,196 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224448.csv
+2026-01-28 22:44:49,217 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224448.csv | errors=0
+2026-01-28 22:44:49,219 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=523 revenue=13501985.0
+2026-01-28 22:44:50,668 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224450.csv
+2026-01-28 22:44:51,221 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224450.csv
+2026-01-28 22:44:51,239 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224450.csv | errors=0
+2026-01-28 22:44:51,241 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=506 revenue=13605473.0
+2026-01-28 22:44:52,670 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224452.csv
+2026-01-28 22:44:53,352 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224452.csv
+2026-01-28 22:44:53,376 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224452.csv | errors=0
+2026-01-28 22:44:53,377 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=533 revenue=13761707.0
+2026-01-28 22:44:54,673 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224454.csv
+2026-01-28 22:44:55,379 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224454.csv
+2026-01-28 22:44:55,398 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224454.csv | errors=0
+2026-01-28 22:44:55,400 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=543 revenue=12941348.0
+2026-01-28 22:44:56,679 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224456.csv
+2026-01-28 22:44:57,401 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224456.csv
+2026-01-28 22:44:57,414 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224456.csv | errors=0
+2026-01-28 22:44:57,414 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=541 revenue=12964423.0
+2026-01-28 22:44:58,683 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224458.csv
+2026-01-28 22:44:59,421 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224458.csv
+2026-01-28 22:44:59,495 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224458.csv | errors=0
+2026-01-28 22:44:59,503 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=545 revenue=14506960.0
+2026-01-28 22:45:00,689 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224500.csv
+2026-01-28 22:45:01,504 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224500.csv
+2026-01-28 22:45:01,529 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224500.csv | errors=0
+2026-01-28 22:45:01,529 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=588 revenue=15341268.0
+2026-01-28 22:45:02,696 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224502.csv
+2026-01-28 22:45:03,532 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224502.csv
+2026-01-28 22:45:03,554 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224502.csv | errors=0
+2026-01-28 22:45:03,557 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=596 revenue=13487196.0
+2026-01-28 22:45:04,705 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224504.csv
+2026-01-28 22:45:05,558 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224504.csv
+2026-01-28 22:45:05,571 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224504.csv | errors=0
+2026-01-28 22:45:05,571 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=576 revenue=14076809.0
+2026-01-28 22:45:06,711 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224506.csv
+2026-01-28 22:45:07,576 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224506.csv
+2026-01-28 22:45:07,616 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224506.csv | errors=0
+2026-01-28 22:45:07,616 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=526 revenue=12576849.0
+2026-01-28 22:45:08,772 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224508.csv
+2026-01-28 22:45:09,622 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224508.csv
+2026-01-28 22:45:09,643 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224508.csv | errors=0
+2026-01-28 22:45:09,643 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=541 revenue=13247857.0
+2026-01-28 22:45:10,824 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224510.csv
+2026-01-28 22:45:11,654 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224510.csv
+2026-01-28 22:45:11,675 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224510.csv | errors=0
+2026-01-28 22:45:11,679 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=531 revenue=12913144.0
+2026-01-28 22:45:12,833 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224512.csv
+2026-01-28 22:45:13,680 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224512.csv
+2026-01-28 22:45:13,765 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224512.csv | errors=0
+2026-01-28 22:45:13,765 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=532 revenue=13297030.0
+2026-01-28 22:45:14,843 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224514.csv
+2026-01-28 22:45:15,769 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224514.csv
+2026-01-28 22:45:15,809 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224514.csv | errors=0
+2026-01-28 22:45:15,811 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=543 revenue=13091245.0
+2026-01-28 22:45:16,853 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224516.csv
+2026-01-28 22:45:17,814 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224516.csv
+2026-01-28 22:45:17,850 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224516.csv | errors=0
+2026-01-28 22:45:17,855 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=528 revenue=13267725.0
+2026-01-28 22:45:18,859 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224518.csv
+2026-01-28 22:45:19,857 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224518.csv
+2026-01-28 22:45:19,887 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224518.csv | errors=0
+2026-01-28 22:45:19,892 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=554 revenue=13609237.0
+2026-01-28 22:45:20,880 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224520.csv
+2026-01-28 22:45:21,894 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224520.csv
+2026-01-28 22:45:21,966 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224520.csv | errors=0
+2026-01-28 22:45:21,966 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=507 revenue=12787529.0
+2026-01-28 22:45:22,886 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224522.csv
+2026-01-28 22:45:23,971 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224522.csv
+2026-01-28 22:45:24,003 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224522.csv | errors=0
+2026-01-28 22:45:24,008 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=552 revenue=13800355.0
+2026-01-28 22:45:24,891 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224524.csv
+2026-01-28 22:45:26,010 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224524.csv
+2026-01-28 22:45:26,042 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224524.csv | errors=0
+2026-01-28 22:45:26,052 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=528 revenue=13476605.0
+2026-01-28 22:45:26,901 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224526.csv
+2026-01-28 22:45:28,053 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224526.csv
+2026-01-28 22:45:28,078 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224526.csv | errors=0
+2026-01-28 22:45:28,086 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=508 revenue=11424504.0
+2026-01-28 22:45:28,961 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224528.csv
+2026-01-28 22:45:30,088 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224528.csv
+2026-01-28 22:45:30,108 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224528.csv | errors=0
+2026-01-28 22:45:30,111 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=530 revenue=13146188.0
+2026-01-28 22:45:30,971 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224530.csv
+2026-01-28 22:45:32,111 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224530.csv
+2026-01-28 22:45:32,142 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224530.csv | errors=0
+2026-01-28 22:45:32,142 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=511 revenue=12681262.0
+2026-01-28 22:45:32,975 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224532.csv
+2026-01-28 22:45:34,146 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224532.csv
+2026-01-28 22:45:34,183 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224532.csv | errors=0
+2026-01-28 22:45:34,183 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=487 revenue=11474274.0
+2026-01-28 22:45:34,981 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224534.csv
+2026-01-28 22:45:36,192 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224534.csv
+2026-01-28 22:45:36,225 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224534.csv | errors=0
+2026-01-28 22:45:36,225 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=574 revenue=15127820.0
+2026-01-28 22:45:36,987 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224536.csv
+2026-01-28 22:45:38,227 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224536.csv
+2026-01-28 22:45:38,267 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224536.csv | errors=0
+2026-01-28 22:45:38,267 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=569 revenue=15954716.0
+2026-01-28 22:45:38,995 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224538.csv
+2026-01-28 22:45:40,275 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224538.csv
+2026-01-28 22:45:40,306 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224538.csv | errors=0
+2026-01-28 22:45:40,308 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=532 revenue=14416986.0
+2026-01-28 22:45:41,001 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224540.csv
+2026-01-28 22:45:42,310 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224540.csv
+2026-01-28 22:45:42,375 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224540.csv | errors=0
+2026-01-28 22:45:42,382 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=542 revenue=14069864.0
+2026-01-28 22:45:43,013 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224543.csv
+2026-01-28 22:45:44,384 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224543.csv
+2026-01-28 22:45:44,405 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224543.csv | errors=0
+2026-01-28 22:45:44,408 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=548 revenue=13759188.0
+2026-01-28 22:45:45,068 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224545.csv
+2026-01-28 22:45:46,409 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224545.csv
+2026-01-28 22:45:46,428 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224545.csv | errors=0
+2026-01-28 22:45:46,428 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=547 revenue=14122105.0
+2026-01-28 22:45:47,072 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224547.csv
+2026-01-28 22:45:48,431 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224547.csv
+2026-01-28 22:45:48,448 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224547.csv | errors=0
+2026-01-28 22:45:48,450 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=544 revenue=14063984.0
+2026-01-28 22:45:49,077 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224549.csv
+2026-01-28 22:45:50,452 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224549.csv
+2026-01-28 22:45:50,467 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224549.csv | errors=0
+2026-01-28 22:45:50,467 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=541 revenue=13140360.0
+2026-01-28 22:45:51,081 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224551.csv
+2026-01-28 22:45:52,470 [INFO] RunID=4154e6 | ℹ️ Processing file: sales_20260128_224551.csv
+2026-01-28 22:45:52,494 [INFO] RunID=4154e6 | ℹ️ File done | sales_20260128_224551.csv | errors=0
+2026-01-28 22:45:52,499 [INFO] RunID=4154e6 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=559 revenue=14690052.0
+2026-01-28 22:45:53,089 [INFO] RunID=4154e6 | ℹ️ Generated CSV file: sales_20260128_224553.csv
+2026-01-28 22:45:54,024 [INFO] RunID=4154e6 | ℹ️ Stop CSV generator requested
+2026-01-28 22:45:54,024 [INFO] RunID=4154e6 | ℹ️ Stop file processing requested
+2026-01-28 22:45:54,095 [INFO] RunID=4154e6 | ℹ️ CSV generator stopped
+2026-01-28 22:46:04,658 [INFO] RunID=5878a1 | ℹ️ Logging initialized
+2026-01-28 22:46:04,660 [INFO] RunID=5878a1 | ℹ️ CSV generator started
+2026-01-28 22:46:04,662 [INFO] RunID=5878a1 | ℹ️ Generated CSV file: sales_20260128_224604.csv
+2026-01-28 22:46:06,674 [INFO] RunID=5878a1 | ℹ️ Generated CSV file: sales_20260128_224606.csv
+2026-01-28 22:46:07,302 [INFO] RunID=5878a1 | ℹ️ Logging initialized
+2026-01-28 22:46:07,304 [INFO] RunID=5878a1 | ℹ️ Sales Data Processor started
+2026-01-28 22:46:07,304 [INFO] RunID=5878a1 | ℹ️ Processing file: sales_20260128_224553.csv
+2026-01-28 22:46:07,376 [INFO] RunID=5878a1 | ℹ️ File done | sales_20260128_224553.csv | errors=0
+2026-01-28 22:46:07,376 [INFO] RunID=5878a1 | ℹ️ Processing file: sales_20260128_224604.csv
+2026-01-28 22:46:07,390 [INFO] RunID=5878a1 | ℹ️ File done | sales_20260128_224604.csv | errors=0
+2026-01-28 22:46:07,390 [INFO] RunID=5878a1 | ℹ️ Processing file: sales_20260128_224606.csv
+2026-01-28 22:46:07,401 [INFO] RunID=5878a1 | ℹ️ File done | sales_20260128_224606.csv | errors=0
+2026-01-28 22:46:07,404 [INFO] RunID=5878a1 | ℹ️ Run summary | files=3 rows=300 valid=300 invalid=0 qty=1654 revenue=42907026.0
+2026-01-28 22:46:08,681 [INFO] RunID=5878a1 | ℹ️ Generated CSV file: sales_20260128_224608.csv
+2026-01-28 22:46:09,405 [INFO] RunID=5878a1 | ℹ️ Processing file: sales_20260128_224608.csv
+2026-01-28 22:46:09,428 [INFO] RunID=5878a1 | ℹ️ File done | sales_20260128_224608.csv | errors=0
+2026-01-28 22:46:09,429 [INFO] RunID=5878a1 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=516 revenue=13120527.0
+2026-01-28 22:46:10,686 [INFO] RunID=5878a1 | ℹ️ Generated CSV file: sales_20260128_224610.csv
+2026-01-28 22:46:11,430 [INFO] RunID=5878a1 | ℹ️ Processing file: sales_20260128_224610.csv
+2026-01-28 22:46:11,449 [INFO] RunID=5878a1 | ℹ️ File done | sales_20260128_224610.csv | errors=0
+2026-01-28 22:46:11,449 [INFO] RunID=5878a1 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=551 revenue=13838115.0
+2026-01-28 22:46:12,699 [INFO] RunID=5878a1 | ℹ️ Generated CSV file: sales_20260128_224612.csv
+2026-01-28 22:46:13,453 [INFO] RunID=5878a1 | ℹ️ Processing file: sales_20260128_224612.csv
+2026-01-28 22:46:13,464 [INFO] RunID=5878a1 | ℹ️ File done | sales_20260128_224612.csv | errors=0
+2026-01-28 22:46:13,469 [INFO] RunID=5878a1 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=579 revenue=14733591.0
+2026-01-28 22:46:14,710 [INFO] RunID=5878a1 | ℹ️ Generated CSV file: sales_20260128_224614.csv
+2026-01-28 22:46:15,470 [INFO] RunID=5878a1 | ℹ️ Processing file: sales_20260128_224614.csv
+2026-01-28 22:46:15,487 [INFO] RunID=5878a1 | ℹ️ File done | sales_20260128_224614.csv | errors=0
+2026-01-28 22:46:15,495 [INFO] RunID=5878a1 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=535 revenue=12303418.0
+2026-01-28 22:46:16,719 [INFO] RunID=5878a1 | ℹ️ Generated CSV file: sales_20260128_224616.csv
+2026-01-28 22:46:17,496 [INFO] RunID=5878a1 | ℹ️ Processing file: sales_20260128_224616.csv
+2026-01-28 22:46:17,523 [INFO] RunID=5878a1 | ℹ️ File done | sales_20260128_224616.csv | errors=0
+2026-01-28 22:46:17,523 [INFO] RunID=5878a1 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=535 revenue=14537630.0
+2026-01-28 22:46:18,726 [INFO] RunID=5878a1 | ℹ️ Generated CSV file: sales_20260128_224618.csv
+2026-01-28 22:46:19,528 [INFO] RunID=5878a1 | ℹ️ Processing file: sales_20260128_224618.csv
+2026-01-28 22:46:19,551 [INFO] RunID=5878a1 | ℹ️ File done | sales_20260128_224618.csv | errors=0
+2026-01-28 22:46:19,554 [INFO] RunID=5878a1 | ℹ️ Run summary | files=1 rows=100 valid=100 invalid=0 qty=616 revenue=17435489.0
+2026-01-28 22:46:20,729 [INFO] RunID=5878a1 | ℹ️ Generated CSV file: sales_20260128_224620.csv
+2026-01-28 22:46:21,335 [INFO] RunID=5878a1 | ℹ️ Stop CSV generator requested
+2026-01-28 22:46:21,335 [INFO] RunID=5878a1 | ℹ️ Stop file processing requested
